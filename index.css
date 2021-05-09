@@ -1,0 +1,196 @@
+/* nav */
+/* .nav{
+    position: sticky;
+} */
+body{
+    font-family: cursive;
+    background: rgb(219, 218, 218);
+}
+.navbar-brand{
+    color: orange;
+    font-size: 33px;
+    font-weight: 500;
+    transition: all 0.1s ease-out;
+}
+#cart-btn{
+    width: 195px;
+    font-weight: 700;
+}
+#cart-btn span{
+    color: green;
+    transition: all 0.1s ease-out;
+}
+.navbar-brand:hover span{
+    color: orange;
+    cursor: pointer;
+}
+
+.logo:hover{
+    color: red;
+    cursor: pointer;
+} 
+nav span{
+    color: red;
+}
+
+/* coursel */
+.carousel-inner img{
+    height: 540px;
+    width: 100%;
+    object-fit:inherit;
+}
+
+/* items */
+.container{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.container img{
+    /* margin: 3px; */
+    padding-top: 20px;
+    height:20rem;
+    /* width: 20rem; */
+    object-fit: fill;
+}
+.card-view {
+    background-color: rgb(248, 182, 228);
+    border-radius: 15px;
+    cursor: pointer;
+}
+.card-view:hover{
+    background-color: rgb(194, 168, 218);
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+.card-view .card-body{
+    
+}
+.card-view.card-title span{
+    position: absolute;
+    right: 17px;
+}
+
+
+
+/* foot */
+.foot-container{
+
+    width: 100%;
+}
+.foot{
+    width: 100%;
+    margin-top: 11rem;
+    background-color: black;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.foot .item{
+    margin-left: 80px;
+    font-size: 25px;
+    color: palevioletred;
+    text-decoration: none;
+    transition: all 0.3s ease-out;
+} 
+.foot .item:hover{
+    color: blueviolet;
+}
+.foot h3{
+    color: orange;
+}
+.foot h3 span{
+    color: red;
+}
+
+
+
+/* cart styling */
+
+#cart-title{
+    text-align: center;
+    font-weight: 900;
+    font-family: cursive;
+    color: red;
+    margin: 5rem;
+}
+#cart-title i{
+    color: black;
+}
+.product-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    margin-left: 7rem;
+    justify-content: center;
+
+}
+.product-container h4{
+    text-align: center;
+    color: darkorange;
+    font-size: 33px;
+    font-weight: 900;
+}
+.product-container i{
+    color: black;
+    font-size: 33px;
+    font-weight: 700;
+
+}
+.product-container img{
+    width: 15rem;
+    height: 15rem;
+    border-radius: 0 40px 40px 0;
+}
+.product-container .card-body{
+    margin-left: 4rem;
+
+}
+.product-container .card{
+    border: 2px solid brown;
+    margin: rem;
+    padding: 22px 0;
+}
+.product-container .card-title{
+    font-size: 21px;
+    font-weight: 700;
+    color: red;
+    position: relative;
+}
+.product-container .card-title i{
+    font-size: 18px;
+    position: absolute;
+    right: 15px;
+}
+.product-container .card-title i:hover{
+    color: red;
+
+}
+.product-container .card-price,.card-quan{
+    font-size: 21px;
+    font-weight: 700;
+}
+.product-container .card-add{
+    background-color: rgb(248, 182, 228);
+    border-radius: 0 80px;
+}
+
+.product-container .card-add:hover{
+    background-color: rgb(194, 168, 218);
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+    cursor: pointer;
+}
+
+
+/* total price  */
+.total-price{
+    margin-left:7rem ;   
+}
+.total-price .card-header{
+    background: orange;
+    font-size: 23px;
+    font-weight: 700;
+}
