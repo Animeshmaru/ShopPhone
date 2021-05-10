@@ -125,7 +125,7 @@ nav span{
     margin-top: 3rem;
     margin-left: 7rem;
     justify-content: center;
-
+    
 }
 .product-container h4{
     text-align: center;
@@ -142,7 +142,7 @@ nav span{
 .product-container img{
     width: 15rem;
     height: 15rem;
-    border-radius: 0 40px 40px 0;
+    border-radius: 40px;
 }
 .product-container .card-body{
     margin-left: 4rem;
@@ -174,7 +174,7 @@ nav span{
 }
 .product-container .card-add{
     background-color: rgb(248, 182, 228);
-    border-radius: 0 80px;
+    border-radius: 20px;
 }
 
 .product-container .card-add:hover{

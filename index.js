@@ -213,15 +213,14 @@ clearAll.addEventListener('click',()=>{
     })
 // displayItems();
  
-let deleteItem=document.querySelector(".delete-item")
+// delete item
+// let deleteItem=document.querySelector('.delete-item');
 // deleteItem.addEventListener('click',()=>{
-    //     cartItems[0].clear()
-    // })
-    let cartItems=localStorage.getItem("productsInCart")
-for (let i = 0; i < cartItems.length; i++) {
-        cartItems=JSON.parse(cartItems)
-    deleteItem.addEventListener('click',()=>{
-        // localStorage.removeItem()
-        cartItems[i]=null
-    })  
-}
+//   let cartItems=JSON.parse(localStorage.getItem("productsInCart"))
+//   for (let index = 0; index < cartItems.length; index++) {
+//       let cartItems=JSON.parse(cartItems[i]);
+//       cartItems.splice(i,1);
+//   }
+//   cartItems= JSON.stringify(cartItems);
+//  localStorage.setItem('productsInCart',cartItems)
+// })
