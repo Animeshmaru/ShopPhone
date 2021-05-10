@@ -75,7 +75,7 @@ nav span{
 
 
 
-@media only screen and (max-width:315px){
+@media only screen and (max-width:415px){
     .container {
         display: flex;
         flex-direction: column;
@@ -248,7 +248,7 @@ nav span{
     box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
     cursor: pointer;
 }
-@media only screen and (max-width:315px){
+@media only screen and (max-width:415px){
     .product-container{
         margin-left:0rem;   
         margin: 18px;
@@ -270,7 +270,7 @@ nav span{
 .total-price{
     margin-left:7rem ;   
 }
-@media only screen and (max-width:315px){
+@media only screen and (max-width:415px){
     .total-price{
         margin-left:9px;   
     }   
