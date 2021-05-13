@@ -7,7 +7,15 @@ body{
     color: orange;
     font-size: 33px;
     font-weight: 500;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
     transition: all 0.1s ease-out;
+}
+.navbar-brand .letters{
+    transform-origin: 0 100%;
+    display: inline-block;
+    line-height: 1em;
 }
 #cart-btn{
     width: 195px;

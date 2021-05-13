@@ -1,4 +1,62 @@
+// animate cards
+var mq = window.matchMedia( "(max-width: 470px)" );
+if (mq.matches) {
+    // window width is at less than 470px
+    $(document).ready(function(){
+      $(window).scroll(function(){
+        var posTop=$(document).scrollTop();
+        // console.log(posTop)
+        if(posTop>100&&posTop<400)$('.card-1').addClass('animate__animated animate__zoomIn')
+        if(posTop>500&&posTop<900)$('.card-2').addClass('animate__animated animate__zoomIn')
+        if(posTop>1000&&posTop<1400)$('.card-3').addClass('animate__animated animate__zoomIn')
+        if(posTop>1600&&posTop<1900)$('.card-4').addClass('animate__animated animate__zoomIn')
+        if(posTop>2000&&posTop<2600)$('.card-5').addClass('animate__animated animate__zoomIn')
+        if(posTop>2700&&posTop<3300)$('.card-6').addClass('animate__animated animate__zoomIn')
+        if(posTop>3400&&posTop<3800)$('.card-7').addClass('animate__animated animate__zoomIn')
+        if(posTop>3900&&posTop<4300)$('.card-8').addClass('animate__animated animate__zoomIn')
+        if(posTop>4300&&posTop<4800)$('.card-9').addClass('animate__animated animate__zoomIn')
+      });
+    });
+}
+else {
+    // window width is greater than 570px
+    $(document).ready(function(){
+      $(window).scroll(function(){
+        var posTop=$(document).scrollTop();
+        console.log(posTop)
+        if(posTop>200&&posTop<400)$('.card-1,.card-2,.card-3').addClass('animate__animated animate__zoomIn')
+        if(posTop>500&&posTop<900)$('.card-4,.card-5,.card-6').addClass('animate__animated animate__zoomIn')
+        if(posTop>1000&&posTop<1400)$('.card-7,.card-8,.card-9').addClass('animate__animated animate__zoomIn')      
+      });
+    });
+    }
+
+    // animate logo
+var textWrapper = document.querySelector('.logo .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letters'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.logo .letters',
+    translateY: ["1.1em", 0],
+    translateX: ["0.55em", 0],
+    translateZ: 0,
+    rotateZ: [180, 0],
+    duration: 750,
+    easing: "easeOutExpo",
+    delay: (el, i) => 50 * i
+  }).add({
+    targets: '.logo',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+
+
+
 let carts=document.querySelectorAll('.add');
+
 refreshCart();   // load local data
 let products=[
     {
@@ -126,7 +184,7 @@ function totCost(product) {
 
 
 
-displayItems();
+// displayItems();
 function displayItems() {
     let cartItems=localStorage.getItem("productsInCart")
     cartItems=JSON.parse(cartItems)
@@ -142,7 +200,7 @@ function displayItems() {
     totCost=totCost.toFixed(2)
 
     
-    if (cartItems&&productContainer!=null) {
+    if (cartItems!=null&&productContainer!=null) {
         productContainer.innerHTML="";
 
         totalPrice.innerHTML=`<div class="card text-dark bg-warning mb-3" style="max-width: 18rem;">
@@ -211,16 +269,7 @@ clearAll.addEventListener('click',()=>{
       </div>`
         
     })
-// displayItems();
- 
-// delete item
-// let deleteItem=document.querySelector('.delete-item');
-// deleteItem.addEventListener('click',()=>{
-//   let cartItems=JSON.parse(localStorage.getItem("productsInCart"))
-//   for (let index = 0; index < cartItems.length; index++) {
-//       let cartItems=JSON.parse(cartItems[i]);
-//       cartItems.splice(i,1);
-//   }
-//   cartItems= JSON.stringify(cartItems);
-//  localStorage.setItem('productsInCart',cartItems)
-// })
+
+
+
+
