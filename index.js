@@ -23,7 +23,7 @@ else {
     $(document).ready(function(){
       $(window).scroll(function(){
         var posTop=$(document).scrollTop();
-        console.log(posTop)
+        // console.log(posTop)
         if(posTop>200&&posTop<400)$('.card-1,.card-2,.card-3').addClass('animate__animated animate__zoomIn')
         if(posTop>500&&posTop<900)$('.card-4,.card-5,.card-6').addClass('animate__animated animate__zoomIn')
         if(posTop>1000&&posTop<1400)$('.card-7,.card-8,.card-9').addClass('animate__animated animate__zoomIn')      
