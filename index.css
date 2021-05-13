@@ -12,7 +12,7 @@ body{
     overflow: hidden;
     transition: all 0.1s ease-out;
 }
-.navbar-brand .letters{
+.navbar-brand .letter{
     transform-origin: 0 100%;
     display: inline-block;
     line-height: 1em;

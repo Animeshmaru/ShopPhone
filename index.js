@@ -33,7 +33,7 @@ else {
 
     // animate logo
 var textWrapper = document.querySelector('.logo .letters');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letters'>$&</span>");
+// textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
 anime.timeline({loop: true})
   .add({
@@ -184,7 +184,7 @@ function totCost(product) {
 
 
 
-// displayItems();
+displayItems();
 function displayItems() {
     let cartItems=localStorage.getItem("productsInCart")
     cartItems=JSON.parse(cartItems)
@@ -213,6 +213,29 @@ function displayItems() {
           <button type="button" class="clear-all btn btn-dark">Clear All</button>
         </div>
       </div>`
+      let clearAll=document.querySelector(".clear-all")
+        clearAll.addEventListener('click',()=>{
+        let cartItems=localStorage.getItem("productsInCart")
+        let totalPrice=document.querySelector(".total-price")
+        let footContainer=document.querySelector(".foot-container")
+        let productContainer=document.querySelector(".product-container")
+    
+        localStorage.removeItem("productsInCart")
+        localStorage.setItem("total",0)
+        localStorage.setItem("cartNumbers",0)
+        refreshCart();
+        totalPrice.innerHTML=``
+        productContainer.innerHTML='<h4><i class="far fa-sad-cry"></i> No Items</h4>'
+        footContainer.innerHTML=` <div class="foot" style="position: absolute;bottom: 0;">
+        <ul class="items">
+          <a href="#" class="item">Privacy</a>
+          <a href="#" class="item">Terms</a>
+          <a href="#" class="item">Contact</a>
+        </ul>
+        <h3>Shop<span>Phone</span> || Animesh © 2021</h3>
+      </div>`
+        
+    })
 
         Object.values(cartItems).map(item=>{
             productContainer.innerHTML += ` <div class="card-add card mb-3" style="max-width: 540px;">
@@ -245,31 +268,33 @@ function displayItems() {
     }
 }
 
-displayItems();
-let clearAll=document.querySelector(".clear-all")
-clearAll.addEventListener('click',()=>{
-        let cartItems=localStorage.getItem("productsInCart")
-        let totalPrice=document.querySelector(".total-price")
-        let footContainer=document.querySelector(".foot-container")
-        let productContainer=document.querySelector(".product-container")
+// displayItems();
+// let productNumbers=localStorage.getItem('cartNumbers');
+// if(productNumbers!=null){
+// let clearAll=document.querySelector(".clear-all")
+// clearAll.addEventListener('click',()=>{
+//         let cartItems=localStorage.getItem("productsInCart")
+//         let totalPrice=document.querySelector(".total-price")
+//         let footContainer=document.querySelector(".foot-container")
+//         let productContainer=document.querySelector(".product-container")
     
-        localStorage.removeItem("productsInCart")
-        localStorage.setItem("total",0)
-        localStorage.setItem("cartNumbers",0)
-        refreshCart();
-        totalPrice.innerHTML=``
-        productContainer.innerHTML='<h4><i class="far fa-sad-cry"></i> No Items</h4>'
-        footContainer.innerHTML=` <div class="foot" style="position: absolute;bottom: 0;">
-        <ul class="items">
-          <a href="#" class="item">Privacy</a>
-          <a href="#" class="item">Terms</a>
-          <a href="#" class="item">Contact</a>
-        </ul>
-        <h3>Shop<span>Phone</span> || Animesh © 2021</h3>
-      </div>`
+//         localStorage.removeItem("productsInCart")
+//         localStorage.setItem("total",0)
+//         localStorage.setItem("cartNumbers",0)
+//         refreshCart();
+//         totalPrice.innerHTML=``
+//         productContainer.innerHTML='<h4><i class="far fa-sad-cry"></i> No Items</h4>'
+//         footContainer.innerHTML=` <div class="foot" style="position: absolute;bottom: 0;">
+//         <ul class="items">
+//           <a href="#" class="item">Privacy</a>
+//           <a href="#" class="item">Terms</a>
+//           <a href="#" class="item">Contact</a>
+//         </ul>
+//         <h3>Shop<span>Phone</span> || Animesh © 2021</h3>
+//       </div>`
         
-    })
-
+//     })
+//   }
 
 
 
